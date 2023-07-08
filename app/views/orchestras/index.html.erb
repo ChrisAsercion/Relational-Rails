@@ -1,0 +1,10 @@
+<h1>All orchestras</h1>
+<% @orchestras.each do |orchestra| %>
+  <h3><%= orchestra.name %> </h3>
+  <h2><a href="/orchestras/<%= orchestra.id %>"><%= orchestra.name %></a></h2>
+  <p><%= link_to "Orchestra Information", "orchestra/#{orchestra.id}"%></p>
+<% end %>
+<%# @orchestras.each do |orchestra| %>
+ <h3><a href="/ochestras/#{orchestra}">orchestra.name </a></h3>
+<%# end %>
+
