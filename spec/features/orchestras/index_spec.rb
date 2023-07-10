@@ -11,15 +11,8 @@ RSpec.describe "orchestras Index page", type: :feature do
         
         visit "/orchestras"
         expect(page).to have_content(orch_1.name)
+        expect(page).to_not have_content(orch_1.chairs)
+        #save_and_open_page 
       end
-
-    describe "When I visit /orchestras/:id"
-      it 'I see the parent with that id including the parent attributes' do
-        orch_1 = Orchestra.create!(name: "Example Orchestra", chairs: 100, conductor: "Anne Example", active: true, venue: true)
-
-        visit "/orchestras/#{orch_1.id}"
-      end
-    end
-
   end
 end

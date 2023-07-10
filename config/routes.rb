@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   get "/orchestras/new", to: "orchestras#new"
   post "/orchestras", to: "orchestras#create"
   get "/orchestras/:id", to: "orchestras#info"
+  get "/musicians", to: "musicians#index"
+  get "/musicians/:id", to: "musicians#info"
 
 end

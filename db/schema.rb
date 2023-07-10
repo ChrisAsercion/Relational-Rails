@@ -15,6 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_07_001912) do
   enable_extension "plpgsql"
 
   create_table "musicians", force: :cascade do |t|
+    t.string "name"
     t.string "instruments"
     t.integer "songs"
     t.boolean "on_call"

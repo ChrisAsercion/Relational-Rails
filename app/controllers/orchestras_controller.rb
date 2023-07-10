@@ -18,6 +18,6 @@ class OrchestrasController < ApplicationController
   end
 
   def info
-    require 'pry'; binding.pry
+    @orch_info = Orchestra.find(params[:id])
   end
 end
