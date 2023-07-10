@@ -14,5 +14,13 @@ RSpec.describe "orchestras Index page", type: :feature do
         expect(page).to_not have_content(orch_1.chairs)
         #save_and_open_page 
       end
+
+      it 'I see that records are ordered by most recently created first
+      And next to each of the records I see when it was created' do
+        orch_1 = Orchestra.create!(name: "Example Orchestra", chairs: 100, conductor: "Anne Example", active: true, venue: true)
+        musician_1 = Musician.create!(name: "Example Musician", instruments: "bassoon", songs: 10, on_call: true, orchestra_id: orch_1.id)
+        
+      end
+
   end
 end

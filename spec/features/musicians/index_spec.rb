@@ -15,5 +15,6 @@ RSpec.describe "Musicians Index page", type: :feature do
         #save_and_open_page 
       end
     end
+
   end
 end

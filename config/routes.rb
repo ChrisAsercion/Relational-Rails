@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get "/orchestras/:id", to: "orchestras#info"
   get "/musicians", to: "musicians#index"
   get "/musicians/:id", to: "musicians#info"
+  get "orchestras/:id/musicians", to: "orchestras#tables"
 
 end

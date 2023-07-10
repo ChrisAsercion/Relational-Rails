@@ -1,6 +1,6 @@
-class OrchestrasController < ApplicationController
+class OrchestrasController < ApplicationController 
   def index
-    @orchestras = Orchestra.all #['Orch 1','Orch 2','Orch 3'] 
+    @orchestras = Orchestra.order('created_at DESC')  
   end
 
   def new
@@ -14,10 +14,21 @@ class OrchestrasController < ApplicationController
 
     orchestra.save
 
-    redirect_to '/tasks'
+    redirect_to '/orchestras'
   end
 
   def info
     @orch_info = Orchestra.find(params[:id])
+  end
+
+  def tables
+    @current_group = Orchestra.find(params[:id])
+    @orchestra_musicians = Musician.all
+    @musician_finder = []
+    @orchestra_musicians.each do |musician|
+      if musician.orchestra_id == @current_group.id
+        @musician_finder << musician
+      end
+    end
   end
 end
