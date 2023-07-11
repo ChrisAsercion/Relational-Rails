@@ -1,10 +1,7 @@
 <h1>All orchestras</h1>
 <% @orchestras.each do |orchestra| %>
-  <h2><%= orchestra.name %> </h2>
-  <h3><a href="/orchestras/<%= orchestra.id %>"><%= orchestra.name %></a> created at:<%=orchestra.created_at%></h3>
-  <p><%= link_to "Orchestra Information", "orchestra/#{orchestra.id}"%></p>
+  <h2><%= orchestra.name %> created at:<%=orchestra.created_at%> </h2>
+  <h3><a href="/orchestras/<%= orchestra.id %>"><%= orchestra.name %> Information</a> </h3>
 <% end %>
-<%# @orchestras.each do |orchestra| %>
- <h3><a href="/ochestras/#{orchestra}">orchestra.name </a></h3>
-<%# end %>
+<h1><a href="/orchestras/new">New Orchestra</a> </h1>
 

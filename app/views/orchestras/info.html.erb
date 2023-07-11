@@ -6,4 +6,10 @@
   <li>The orchestra has a venue to preform at = <%=@orch_info.venue %></li>
 </ol>
 
+<h3>The number of musicians in this orchestra is <%=@musician_finder.length%> </h3>
+
+<h3><a href="/orchestras/<%=(@orch_info.id).to_s%>/musicians"><%= @orch_info.name %> Musician Information</a> </h3>
+
+<h3><a href="/orchestras/<%=(@orch_info.id).to_s%>/edit"><%= @orch_info.name %> Edit</a> </h3>
+
 

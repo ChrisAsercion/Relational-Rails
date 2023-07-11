@@ -1,0 +1,9 @@
+<form action="/orchestras/<%=@orchestra_id%>/musicians" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Enter a new musician:</p>
+  <p>name:</p><input type='text' name='musician[name]'/><br/>
+  <p>instrument:</p><input type='text' name='musician[instruments]'/><br/>
+  <p>songs:</p><input type='number' name='musician[songs]'/><br/>
+  <p>on call with orchestra:</p><input type='checkbox' name='musician[on_call]'/><br/>
+  <input type='submit'/>
+</form>

@@ -1,8 +1,9 @@
 <h2><%= @current_group.name %> Musician Information</h2>
 <p>
   <%@musician_finder.each do |musician| %>
-    <ol>
+    <ul>
       <li><%=musician.name%></li>
-    </ol>
+    </ul>
   <%end%>
 </p>
+<h3><a href="/orchestras/<%=(@current_group.id).to_s%>/musicians/new"> Create new musician for this orchestra</a> </h3>
